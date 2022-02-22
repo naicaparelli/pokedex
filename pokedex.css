@@ -1,5 +1,5 @@
 *{
-    background-color: #ffefcc;
+    background-color: #e2d5b7;
 }
 
 #base {
@@ -13,6 +13,11 @@
     border-radius: 0.5rem;
     border: 0.2rem solid black;
     box-shadow: inset 5px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+#tampa: {
+    transform: rotateY(160deg);
+
 }
 
 .camera {
@@ -124,13 +129,16 @@
 #seta {    
     margin-top: -15.5rem;
     margin-left: 0.3rem;
-    width: 0;
     background-color: transparent;
     height: 0;
+    outline: none;
     border-top: 40px solid transparent;
     border-left: 30px solid #ffe315;
     border-bottom: 40px solid transparent;
-    cursor: pointer; 
+    cursor: pointer;
+    animation-name: movimentoseta;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
 }
 
 #retangulo {    
@@ -200,10 +208,7 @@
 
 /* Animação */
 
-@keyframes blindText {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.04);
-    }
+@keyframes movimentoseta {
+    from {margin-left:0.3rem;}
+    to {margin-left:0.8rem;}
+}
